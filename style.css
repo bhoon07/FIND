@@ -1,3 +1,9 @@
+@media only screen and (max-width : 992px) {
+    header, main, footer {
+      padding-left: 0;
+    }
+  }
+
 .brand-logo {
     height: 35px;
     width: 35px;
@@ -7,6 +13,10 @@
 
 .nav {
     background-color: slateblue;
+}
+
+.navbar-fixed {
+    font-family: cursive;
 }
 
 #Tig {
@@ -27,4 +37,5 @@ footer {
     background-color: red;
     color: white;
     text-align: center;
+    font-family: cursive;
 }
