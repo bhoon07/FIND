@@ -1,0 +1,27 @@
+{
+  "name": "find",
+  "version": "1.0.0",
+  "description": "An application built to aid owners be reunited with their pets by being a platform that an image, description, and information of the lost pet can be posted.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhoon07/FIND.git"
+  },
+  "keywords": [
+    "FIND"
+  ],
+  "author": "Blaine Hoon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bhoon07/FIND/issues"
+  },
+  "homepage": "https://github.com/bhoon07/FIND#readme",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.4.3"
+  }
+}
