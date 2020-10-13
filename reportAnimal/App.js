@@ -1,7 +1,6 @@
 import React from "react";
 import { FormBtn, Input, TextArea } from "../../../rice-hou-fsf-ft-07-2020-u-c/21-MERN/01-Activities/05-Stu_ReactRouter/Solved/client/src/components/Form";
 import { Col, Row } from "../../../rice-hou-fsf-ft-07-2020-u-c/21-MERN/01-Activities/05-Stu_ReactRouter/Solved/client/src/components/Grid";
-import Button from "../reportAnimal/Button";
 
 function App () {
     return(
