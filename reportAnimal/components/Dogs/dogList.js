@@ -6,40 +6,27 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 
-function Books() {
-  // Setting our component's initial state
-  const [books, setBooks] = useState([])
+function Animals() {
+  const [animals, setAnimals] = useState([])
   const [formObject, setFormObject] = useState({})
 
-  // Load all books and store them with setBooks
   useEffect(() => {
-    loadBooks()
+    loadAnimals()
   }, [])
 
-  // Loads all books and sets them to books
-  function loadBooks() {
-    API.getBooks()
+  function loadAnimals() {
+    API.getAnimals()
       .then(res => 
-        setBooks(res.data)
+        setAnimals(res.data)
       )
       .catch(err => console.log(err));
   };
 
-  // Deletes a book from the database with a given id, then reloads books from the db
-  function deleteBook(id) {
-    API.deleteBook(id)
-      .then(res => loadBooks())
-      .catch(err => console.log(err));
-  }
-
-  // Handles updating component state when the user types into the input field
   function handleInputChange(event) {
     const { name, value } = event.target;
     setFormObject({...formObject, [name]: value})
   };
 
-  // When the form is submitted, use the API.saveBook method to save the book data
-  // Then reload books from the database
   function handleFormSubmit(event) {
     event.preventDefault();
     if (formObject.title && formObject.author) {
@@ -48,7 +35,7 @@ function Books() {
         author: formObject.author,
         synopsis: formObject.synopsis
       })
-        .then(res => loadBooks())
+        .then(res => loadAnimals())
         .catch(err => console.log(err));
     }
   };
@@ -58,23 +45,33 @@ function Books() {
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1>What Books Should I Read?</h1>
+              <h1>Submit Your Report of Lost Animal</h1>
             </Jumbotron>
             <form>
               <Input
                 onChange={handleInputChange}
-                name="title"
-                placeholder="Title (required)"
+                name="name"
+                placeholder="Name"
               />
               <Input
                 onChange={handleInputChange}
-                name="author"
-                placeholder="Author (required)"
+                name="species"
+                placeholder="Species"
+              />
+              <Input
+                onChange={handleInputChange}
+                name="age"
+                placeholder="Age"
+              />
+              <Input
+                onChange={handleInputChange}
+                name="location"
+                placeholder="Location"
               />
               <TextArea
                 onChange={handleInputChange}
-                name="synopsis"
-                placeholder="Synopsis (Optional)"
+                name="description"
+                placeholder="How to Approach Your Animal"
               />
               <FormBtn
                 disabled={!(formObject.author && formObject.title)}
@@ -88,13 +85,13 @@ function Books() {
             <Jumbotron>
               <h1>Books On My List</h1>
             </Jumbotron>
-            {books.length ? (
+            {animals.length ? (
               <List>
-                {books.map(book => (
-                  <ListItem key={book._id}>
-                    <Link to={"/books/" + book._id}>
+                {animals.map(animal => (
+                  <ListItem key={animal._id}>
+                    <Link to={"/animals/" + animal._id}>
                       <strong>
-                        {book.title} by {book.author}
+                        {animal.name} by {animal.species}
                       </strong>
                     </Link>
                   </ListItem>
@@ -110,4 +107,4 @@ function Books() {
   }
 
 
-export default Books;
+export default Animals;
