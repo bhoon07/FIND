@@ -29,11 +29,14 @@ function Animals() {
 
   function handleFormSubmit(event) {
     event.preventDefault();
-    if (formObject.title && formObject.author) {
+    if (formObject.name && formObject.species) {
       API.saveBook({
-        title: formObject.title,
-        author: formObject.author,
-        synopsis: formObject.synopsis
+        name: formObject.name,
+        species: formObject.species,
+        gender: formObject.gender,
+        age: formObject.age,
+        location: formObject.location,
+        description: formObject.description
       })
         .then(res => loadAnimals())
         .catch(err => console.log(err));
@@ -60,6 +63,11 @@ function Animals() {
               />
               <Input
                 onChange={handleInputChange}
+                name="gender"
+                placeholder="Gender"
+              />
+              <Input
+                onChange={handleInputChange}
                 name="age"
                 placeholder="Age"
               />
@@ -74,7 +82,7 @@ function Animals() {
                 placeholder="How to Approach Your Animal"
               />
               <FormBtn
-                disabled={!(formObject.author && formObject.title)}
+                disabled={!(formObject.species && formObject.name)}
                 onClick={handleFormSubmit}
               >
                 Report Animal
