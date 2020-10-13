@@ -77,13 +77,13 @@ function Animals() {
                 disabled={!(formObject.author && formObject.title)}
                 onClick={handleFormSubmit}
               >
-                Submit Book
+                Report Animal
               </FormBtn>
             </form>
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>
-              <h1>Books On My List</h1>
+              <h1>Lost Animals</h1>
             </Jumbotron>
             {animals.length ? (
               <List>
