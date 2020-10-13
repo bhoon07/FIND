@@ -82,10 +82,10 @@ function Animals() {
                 placeholder="How to Approach Your Animal"
               />
               <FormBtn
-                disabled={!(formObject.species && formObject.name)}
-                onClick={handleFormSubmit}
+               disabled={!(formObject.name && formObject.species && formObject.gender && formObject.age && formObject.location)}
+               onClick={handleFormSubmit}
               >
-                Report Animal
+                Submit
               </FormBtn>
             </form>
           </Col>
