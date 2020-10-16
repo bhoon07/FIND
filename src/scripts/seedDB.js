@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const db = require("../models");
+const db = require("/Users/Blaine Hoon/RiceBootcamp/Homework/FIND/src/models");
 
 
 mongoose.connect(
