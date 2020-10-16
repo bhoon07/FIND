@@ -1,8 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Books from "./pages/Animals";
-import Detail from "./pages/Detail";
-import NoMatch from "./pages/NoMatch";
+import Animals from "../components/Dogs/dogList";
+import Detail from "../components/Dogs/Detail";
 
 function App() {
   return (
@@ -10,7 +9,7 @@ function App() {
       <div>
         <Switch>
           <Route exact path={["/", "/animals"]}>
-            <Books />
+            <Animals />
           </Route>
           <Route exact path="/animals/:id">
             <Detail />
