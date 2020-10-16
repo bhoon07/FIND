@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const dogRoutes = require("./animals");
+const dogRoutes = require("../api/animals");
 
 router.use("/", dogRoutes);
 
