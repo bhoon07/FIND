@@ -27,14 +27,14 @@ const bookSeed = [
     title: "Moe (Shelter Name)",
     author: "Male-Labrador (INJURED TIME SENSITIVE)",
     synopsis:
-      "Black with white on paws and front of mouth, Found on Gessner and Highway 6, Blue collar, No tags, No microchip, Missouri City, Texas on 10/18/2020, Located at Missori City Animal Shelter, Call (281)-403-8707",
+      "Black with white on paws and front of mouth, Found on Gessner and Highway 6, Blue collar, No tags, No microchip, Missouri City, Texas on 10/09/2020, Located at Missori City Animal Shelter, Call (281)-403-8707",
     date: new Date(Date.now())
   },
   {
     title: "Bane (Shelter Name)",
     author: "Male-Mastiff",
     synopsis:
-      "Tan with black eyes and black/tan snout, No collar, No tags, No microchip, Found on Wild Peach Place, Missouri City, Texas on 10/18/2020, Located at Missori City Animal Shelter, Call (281)-403-8707",
+      "Tan with black eyes and black/tan snout, No collar, No tags, No microchip, Found on Wild Peach Place, Missouri City, Texas on 10/07/2020, Located at Missori City Animal Shelter, Call (281)-403-8707",
     date: new Date(Date.now())
   },
 ];
