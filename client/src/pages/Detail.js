@@ -38,7 +38,7 @@ function Detail(props) {
         <Row>
           <Col size="md-10 md-offset-1">
             <article>
-              <h1>Description</h1>
+              <h1>Information</h1>
               <p>
                 {book.synopsis}
               </p>

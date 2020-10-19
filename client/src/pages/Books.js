@@ -45,6 +45,7 @@ function Books() {
     event.preventDefault();
     if (formObject.title && formObject.author) {
       API.saveBook({
+        img: formObject.img,
         title: formObject.title,
         author: formObject.author,
         synopsis: formObject.synopsis
@@ -75,7 +76,7 @@ function Books() {
               <TextArea
                 onChange={handleInputChange}
                 name="synopsis"
-                placeholder="Description (Color, Location, Date, etc)"
+                placeholder="Information (Color, Location, Date, etc)"
               />
               <FormBtn
                 disabled={!(formObject.author && formObject.title)}
@@ -95,7 +96,7 @@ function Books() {
                   <ListItem key={book._id}>
                     <Link to={"/books/" + book._id}>
                       <strong>
-                        {book.title} by {book.author}
+                        {book.title} is a {book.author}
                       </strong>
                     </Link>
                     <DeleteBtn onClick={() => deleteBook(book._id)} />
