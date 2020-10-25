@@ -8,7 +8,7 @@ mongoose.connect(
   "mongodb://localhost/reactreadinglist"
 );
 
-const bookSeed = [
+const animalSeed = [
   {
     title: "Claire (Shelter Name)",
     author: "Female-German Shepard",
@@ -41,7 +41,7 @@ const bookSeed = [
 
 db.Book
   .remove({})
-  .then(() => db.Book.collection.insertMany(bookSeed))
+  .then(() => db.Book.collection.insertMany(animalSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
